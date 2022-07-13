@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     padding: 50px;
+    align-content: flex-start;
 }
 
 main {
@@ -20,10 +21,27 @@ main {
 }
 
 .box {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center; 
+}
+
+.box.box10 {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.box.box9 {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+.box.box7 {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
+.box.active {
+    background-color: lightseagreen;
 }
