@@ -4,6 +4,7 @@ const playButton = document.getElementById("play");
 playButton.addEventListener(
   "click",
   function () {
+    containerDom.innerHTML = "";
     const difficulty = document.getElementById("difficulty").value;
     console.log("difficulty: ", typeof difficulty);
     const difficultyN = parseInt(difficulty);
@@ -11,7 +12,7 @@ playButton.addEventListener(
 
     createToggableProgressiveNumberedBox(difficultyN);
   },
-  { once: true }
+//  { once: true } non più necessario perché containerDom.innerHTML = "" resetta il contenuto
 );
 
 function createToggableProgressiveNumberedBox(number) {
@@ -29,6 +30,7 @@ function createToggableProgressiveNumberedBox(number) {
     addBox.append(i);
     addBox.addEventListener("click", function () {
       addBox.classList.toggle("active");
+      console.log(i)
     });
   }
 }
